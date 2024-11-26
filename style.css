@@ -1,0 +1,1238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.backtotop {
+    height: 3rem;
+    width: 3rem;
+    background-color: #0DA34E;
+    border-radius: 50%;
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.box {
+    height: 0vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 30%;
+    background-color: #111111;
+    animation-name: boxincrease;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    overflow-x: hidden;
+}
+
+@keyframes boxincrease {
+    from {
+        height: 0vh;
+        width: 70vw;
+        transform: scaley(0%);
+        transform: scalex(60%);
+        border-radius: 10rem;
+    }
+
+    to {
+        height: 100vh;
+        width: 100vw;
+        transform: scale(100%);
+        margin-top: 0%;
+        background-color: #111111;
+    }
+}
+
+header {
+    height: 8vh;
+    width: 90%;
+    color: white;
+    display: flex;
+    background-color: #111111;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: fixed;
+    top: 0%;
+    left: 5%;
+    z-index: 1;
+}
+
+.headoptions {
+    display: flex;
+    gap: 3rem;
+    margin-left: 35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.headoptions div:hover {
+    color: #0DA34E;
+}
+
+header button {
+    height: 2.5rem;
+    width: 10rem;
+    background-color: #0DA34E;
+    color: white;
+    border: none;
+    border-radius: 6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+header button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+}
+
+header button i {
+    font-size: 1.2rem;
+    vertical-align: -0.2rem;
+    transition: all ease 0.4s;
+}
+
+header button .updivbut {
+    height: 100%;
+}
+
+header button .lodivbut {
+    height: 100%;
+    background-color: white;
+    color: #0DA34E;
+    border-radius: 6rem;
+}
+
+header button .lodivbut i {
+    font-size: 2rem;
+    transform: rotate(-45deg);
+}
+
+header button:hover .lodivbut {
+    transform: translateY(-2.5rem);
+}
+
+header button:hover .updivbut i {
+    transform: translate(2.5rem, 0.8rem);
+}
+
+header button:hover .updivbut {
+    transform: translateY(-2.5rem);
+}
+
+header button:hover {
+    box-shadow: 1px 1px 15px #0DA34E;
+}
+
+header::after {
+    content: "";
+    height: 0.1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(169, 168, 168);
+    animation: slide 1.5s ease-in-out forwards;
+    animation-fill-mode: backwards;
+    animation-delay: 2s;
+}
+
+@keyframes slide {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#bigheading {
+    height: 60vh;
+    width: 90%;
+    /* border: 4px solid white; */
+    margin-top: 8vh;
+    margin-left: 5%;
+    margin-bottom: 5rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5rem 10rem 0rem 10rem;
+}
+
+#bigheading p {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#bigheading h1 {
+    padding-top: 0.5rem;
+    font-size: 5.5rem;
+    font-weight: 600;
+    text-shadow: 4px 1px 2px rgba(4, 198, 33, 0.874);
+}
+
+.h1anim {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#bigheading button {
+    height: 2rem;
+    width: 13rem;
+    border-radius: 10rem;
+    vertical-align: 0.1rem;
+    font-size: 1rem;
+    background-color: #102017;
+    color: #0DA34E;
+    border: 1px solid #0DA34E;
+    cursor: pointer;
+
+}
+
+.videosec {
+    height: 99%;
+    width: 99%;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 15px rgb(161, 163, 161);
+    cursor: pointer;
+}
+
+.videosec video {
+    border-radius: 3rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.hover-area {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures the custom cursor doesn't spill out */
+}
+
+.hover-area .custom-cursor {
+    position: absolute;
+    top: -5%;
+    left: -2%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #0DA34E;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+.hover-area .custom-cursor span {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    pointer-events: none;
+}
+
+
+#section2 {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 8rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec2updiv {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sec2updiv div {
+    height: 100%;
+    width: 33%;
+    background-color: #1F1F1F;
+    padding-top: 12rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    transition: all ease 0.3s;
+}
+
+.sec2updiv div h1 {
+    font-size: 4rem;
+}
+
+.sec2updiv div p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    padding-right: 15rem;
+    color: rgb(154, 152, 152);
+}
+
+.sec2updiv1:hover {
+    background: url(money-hevc-safari-ezgif.com-video-to-gif-converter.gif) no-repeat top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px white;
+}
+
+.sec2updiv2:hover {
+    background: url(awards-vp9-chrome-ezgif.com-video-to-gif-converter.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px white;
+}
+
+.sec2updiv3:hover {
+    background: url(SF-vp9-chrome-ezgif.com-video-to-gif-converter.gif) no-repeat top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px white;
+}
+
+.sec2lodiv {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.sec2lodiv div {
+    height: 100%;
+    width: 49.9%;
+    background-color: #1F1F1F;
+    padding-top: 12rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    transition: all ease 0.3s;
+}
+
+.sec2lodiv div h1 {
+    font-size: 3rem;
+}
+
+.sec2lodiv div p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    padding-right: 15rem;
+    color: rgb(154, 152, 152);
+}
+
+.sec2lodiv1:hover {
+    background: url(sanfrans.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: grayscale(1);
+}
+
+.sec2lodiv2:hover {
+    background: url(allinone.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: grayscale(1);
+}
+
+.section3 {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    background-image: url(section3img.webp);
+    background-size: cover;
+    background-position: center;
+    background-color: #2F3AAA;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10rem;
+}
+
+.section3 h1 {
+    font-size: 6rem;
+    letter-spacing: -0.2rem;
+    padding-bottom: 1rem;
+}
+
+.section3 p {
+    font-size: 1.7rem;
+    padding-bottom: 3rem;
+
+}
+
+.section3 button {
+    height: 4rem;
+    width: 25rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.section3 button i {
+    font-size: 3rem;
+    vertical-align: -0.9rem;
+    transform: rotate(-45deg);
+    transition: all ease 0.4s;
+}
+
+.sec3butup {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.4s;
+}
+
+.sec3butlo {
+    height: 100%;
+    background-color: #0DA34E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.4s;
+    border-radius: 2rem;
+}
+
+.section3 button:hover .sec3butup {
+    transform: translateY(-4rem);
+}
+
+.section3 button:hover .sec3butup i {
+    transform: translatex(3rem);
+}
+
+.section3 button:hover .sec3butlo {
+    transform: translateY(-4rem);
+    cursor: pointer;
+}
+
+footer {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.upfooter {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.upleftfoot {
+    height: 100%;
+    width: 100%;
+    font-size: 2.5rem;
+    letter-spacing: -0.2rem;
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.uprightfoot {
+    height: 100%;
+    width: 40%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.uprightfoot h4 {
+    padding: 2rem 0rem 1rem 0rem;
+    color: grey;
+    font-size: 0.9rem;
+}
+
+.uprightfoot p {
+    font-size: 2.8rem;
+    padding-bottom: 4rem;
+}
+
+.uprightfoot button {
+    height: 2rem;
+    padding: 0rem 1rem 0rem 1rem;
+    margin-right: 1rem;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+}
+
+.uprightfoot button:hover {
+    background-color: #0DA34E;
+    cursor: pointer;
+}
+
+.lofooter {
+    height: 10vh;
+    width: 100%;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgb(241, 239, 239);
+}
+
+.hover-area2 {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding: 0rem;
+    overflow: hidden;
+}
+
+.hover-area2 .custom-cursor2 {
+    position: absolute;
+    top: -5%;
+    left: -2%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #0DA34E;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    opacity: 0;
+}
+
+.hover-area2 .custom-cursor2 span {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    pointer-events: none;
+}
+
+.maindiv {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #111111;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainleftdiv {
+    height: 100vh;
+    width: 45%;
+}
+
+.maindivvideo {
+    height: 30vh;
+    width: 95%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.maindivvideo video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.maininnerdivs div {
+    height: 15vh;
+    width: 46%;
+    background-color: #1F1F1F;
+    border-radius: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 1rem;
+}
+
+.maininnerdivs div p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: rgb(172, 169, 169);
+}
+
+.leftprofile {
+    height: 8vh;
+    width: 4vw;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-image: url(profilelogo.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainleftdiv h4 {
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+.mainleftdiv p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.mainrightdiv {
+    height: 95vh;
+    width: 45%;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem 3rem;
+    margin-top: 1rem;
+}
+
+.mainrightdiv p {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.mainrightdiv input {
+    height: 8vh;
+    width: 90%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.mainrightdiv input::placeholder {
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.mainrightdiv button {
+    height: 10vh;
+    width: 18rem;
+    border-radius: 3rem;
+    border: none;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.mainrightdiv button:hover {
+    background-color: #0DA34E;
+    color: white;
+}
+
+.mainrightdiv button i {
+    font-size: 2rem;
+    vertical-align: -0.4rem;
+}
+
+.rightlastbuttons button {
+    height: 2rem;
+    width: 11rem;
+    font-size: 0.7rem;
+}
+
+@media (max-width:425px) {
+    .headoptions {
+        display: none;
+    }
+
+    header button {
+        height: 1.7rem;
+        width: 7rem;
+        border-radius: 5rem;
+        font-size: 0.7rem;
+    }
+
+    header button i {
+        font-size: 1rem;
+    }
+
+    header button .lodivbut i {
+        font-size: 1.5rem;
+    }
+
+    header button:hover .lodivbut {
+        transform: translateY(-1.7rem);
+    }
+
+    #bigheading {
+        height: 40vh;
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    #bigheading p {
+        font-size: 0.9rem;
+        line-height: 2;
+    }
+
+    #bigheading h1 {
+        font-size: 2rem;
+        padding-top: 0.5rem;
+    }
+
+    #bigheading button {
+        height: 1.5rem;
+        width: 8rem;
+        font-size: 0.7rem;
+    }
+
+    .videosec {
+        height: 95%;
+        margin-top: 0rem;
+    }
+
+    .hover-area {
+        width: 90%;
+        height: 30%;
+    }
+
+    .hover-area .custom-cursor {
+        display: block;
+    }
+
+    .hover-area .custom-cursor span {
+        display: block;
+    }
+
+    #section2 {
+        margin-top: 4rem;
+    }
+
+    .sec2updiv {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sec2updiv div {
+        height: 100%;
+        width: 100%;
+        padding-top: 8rem;
+        padding-left: 1rem;
+
+    }
+
+    .sec2updiv div h1 {
+        font-size: 3rem;
+    }
+
+    .sec2updiv div p {
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    .sec2lodiv {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sec2lodiv div {
+        height: 100%;
+        width: 100%;
+        padding-top: 8rem;
+        padding-left: 1rem;
+    }
+
+    .sec2lodiv div h1 {
+        font-size: 2rem;
+    }
+
+    .sec2lodiv div p {
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    .section3 {
+        margin-top: 4rem;
+        padding: 2rem;
+    }
+
+    .section3 h1 {
+        font-size: 2rem;
+    }
+
+    .section3 p {
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .section3 button {
+        height: 2rem;
+        width: 15rem;
+        font-size: 0.6rem;
+    }
+
+    .section3 button i {
+        font-size: 1.5rem;
+    }
+
+    .section3 button:hover .sec3butup {
+        transform: translateY(-2rem);
+    }
+
+    .section3 button:hover .sec3butlo {
+        transform: translateY(-2rem);
+    }
+
+    footer {
+        height: 100%;
+        width: 90%;
+    }
+
+    .upfooter {
+        height: 110vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .upleftfoot {
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.5rem;
+
+    }
+
+    .uprightfoot {
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .uprightfoot h4 {
+        padding: 1rem 0rem 1rem 0rem;
+        font-size: 0.7rem;
+    }
+
+    .uprightfoot p {
+        font-size: 1.6rem;
+        padding-bottom: 1rem;
+    }
+
+    .uprightfoot button {
+        height: 1.5rem;
+        padding: 0rem 1rem 0rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .lofooter {
+        height: 20%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .hover-area2 {
+        width: 100%;
+    }
+
+    .maindiv {
+        display: none;
+    }
+}
+
+@media (min-width:426px) and (max-width:768px) {
+    .headoptions {
+        display: none;
+    }
+
+    header button {
+        height: 2rem;
+        width: 10rem;
+        border-radius: 5rem;
+        font-size: 0.9rem;
+    }
+
+    header button i {
+        font-size: 1.5rem;
+    }
+
+    header button .lodivbut i {
+        font-size: 1.5rem;
+    }
+
+    header button:hover .lodivbut {
+        transform: translateY(-2rem);
+    }
+
+    #bigheading {
+        height: 50vh;
+        padding: 2rem 0rem 0rem 0rem;
+    }
+
+    #bigheading p {
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    #bigheading h1 {
+        font-size: 3rem;
+        padding-top: 0.5rem;
+    }
+
+    #bigheading button {
+        height: 1.5rem;
+        width: 8rem;
+        font-size: 0.7rem;
+    }
+
+    .videosec {
+        height: 95%;
+        margin-top: 0rem;
+    }
+
+    .hover-area {
+        width: 90%;
+        height: 50%;
+    }
+
+    .hover-area .custom-cursor {
+        display: block;
+    }
+
+    .hover-area .custom-cursor span {
+        display: block;
+    }
+
+    #section2 {
+        margin-top: 8rem;
+    }
+
+    .sec2updiv {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sec2updiv div {
+        height: 100%;
+        width: 100%;
+        padding-top: 12rem;
+        padding-left: 1rem;
+
+    }
+
+    .sec2updiv div h1 {
+        font-size: 3rem;
+    }
+
+    .sec2updiv div p {
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .sec2lodiv {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sec2lodiv div {
+        height: 100%;
+        width: 100%;
+        padding-top: 12rem;
+        padding-left: 1rem;
+    }
+
+    .sec2lodiv div h1 {
+        font-size: 2rem;
+    }
+
+    .sec2lodiv div p {
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .section3 {
+        padding: 5rem;
+    }
+
+    .section3 h1 {
+        font-size: 2.5rem;
+    }
+
+    .section3 p {
+        font-size: 1.2rem;
+    }
+
+    .section3 button {
+        height: 2.5rem;
+        width: 18rem;
+        font-size: 0.8rem;
+    }
+
+    .section3 button i {
+        font-size: 2rem;
+    }
+
+    .section3 button:hover .sec3butup {
+        transform: translateY(-2.5rem);
+    }
+
+    .section3 button:hover .sec3butlo {
+        transform: translateY(-2.5rem);
+    }
+
+    footer {
+        height: 100%;
+        width: 90%;
+    }
+
+    .upfooter {
+        height: 110vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .upleftfoot {
+        width: 100%;
+        padding: 2rem;
+        font-size: 2rem;
+
+    }
+
+    .uprightfoot {
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .uprightfoot h4 {
+        padding: 1rem 0rem 1rem 0rem;
+        font-size: 0.7rem;
+    }
+
+    .uprightfoot p {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .uprightfoot button {
+        height: 1.5rem;
+        padding: 0rem 1rem 0rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .lofooter {
+        height: 20%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .hover-area2 {
+        width: 100%;
+    }
+
+    .maindiv {
+        display: none;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1500px) {
+    .headoptions {
+        gap: 2rem;
+        margin-left: 0rem;
+    }
+
+    header button {
+        height: 2rem;
+    }
+
+    header button:hover .lodivbut {
+        transform: translateY(-2rem);
+    }
+
+    #bigheading {
+        padding: 3rem 2rem 0rem 2rem;
+    }
+
+    #bigheading p {
+        font-size: 1rem;
+    }
+
+    #bigheading h1 {
+        font-size: 4rem;
+    }
+
+    #bigheading button {
+        height: 1.8rem;
+        width: 10rem;
+        font-size: 0.9rem;
+    }
+
+    .videosec {
+        height: 95%;
+        margin-top: 0rem;
+    }
+
+    .hover-area {
+        width: 90%;
+        height: 70%;
+    }
+
+    .hover-area .custom-cursor {
+        display: block;
+    }
+
+    .hover-area .custom-cursor span {
+        display: block;
+    }
+
+    .sec2updiv div {
+        padding-top: 10rem;
+
+    }
+
+    .sec2updiv div h1 {
+        font-size: 2.8rem;
+    }
+
+    .sec2updiv div p {
+        padding-right: 5rem;
+    }
+
+    .sec2lodiv div {
+        padding-top: 10rem;
+    }
+
+    .sec2lodiv div h1 {
+        font-size: 2.4rem;
+    }
+
+    .sec2lodiv div p {
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .section3 {
+        padding: 8rem;
+    }
+
+    .section3 h1 {
+        font-size: 4rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .section3 p {
+        font-size: 1.3rem;
+        padding-bottom: 3rem;
+
+    }
+
+    footer {
+        height: 90%;
+        width: 90%;
+    }
+
+    .upfooter {
+        height: 80vh;
+        width: 100%;
+    }
+
+    .upleftfoot {
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.5rem;
+
+    }
+
+    .uprightfoot {
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 2rem;
+    }
+
+    .uprightfoot h4 {
+        padding: 1rem 0rem 1rem 0rem;
+        font-size: 0.7rem;
+    }
+
+    .uprightfoot p {
+        font-size: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .uprightfoot button {
+        height: 1.5rem;
+        padding: 0rem 1rem 0rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .lofooter {
+        height: 10%;
+        gap: 0.5rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .hover-area2 {
+        width: 100%;
+    }
+
+    .maindiv {
+        display: none;
+    }
+}
